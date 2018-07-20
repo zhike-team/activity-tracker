@@ -28,7 +28,6 @@ module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WA
   }
 
   const closeSession = () => {
-    // FIXME: 是否有必要
     if (instance.countdownTimer) {
       clearTimeout(instance.countdownTimer)
     }
