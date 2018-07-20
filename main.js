@@ -56,7 +56,7 @@ module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WA
   }
 
 
-  resumeCountdown()
+  startSession()
 
   return {
     updateActivity,
