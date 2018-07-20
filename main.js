@@ -1,4 +1,4 @@
-export default function createActivityTracker ({ onBecomeInactive, INACTIVE_WAIT_TIME = 300000, ctx }) {
+module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WAIT_TIME = 300000, ctx }) {
   const instance = {
     options: { onBecomeInactive, INACTIVE_WAIT_TIME, ctx },
     sessionStartTime: null,
