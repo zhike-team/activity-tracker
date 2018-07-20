@@ -1,5 +1,5 @@
 {
-  "name": "ss-activity-tracker",
+  "name": "@zhike/activity-tracker",
   "version": "1.0.2",
   "description": "计算用户活动时间",
   "main": "main.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bestofsong/ss-activity-tracker.git"
+    "url": "git+https://github.com/zhike-team/activity-tracker.git"
   },
   "author": "wansong",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bestofsong/ss-activity-tracker/issues"
+    "url": "https://github.com/zhike-team/activity-tracker/issues"
   },
-  "homepage": "https://github.com/bestofsong/ss-activity-tracker#readme",
+  "homepage": "https://github.com/zhike-team/activity-tracker#readme",
   "dependencies": {
     "eslint": "^5.1.0"
   }
