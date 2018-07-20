@@ -1,6 +1,6 @@
 {
   "name": "ss-activity-tracker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "计算用户活动时间",
   "main": "main.js",
   "scripts": {
