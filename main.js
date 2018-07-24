@@ -2,7 +2,8 @@ module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WA
   const instance = {
     options: { onBecomeInactive, INACTIVE_WAIT_TIME, ctx },
     sessionStartTime: null,
-    countdownTimer: null
+    countdownTimer: null,
+    isPaused: false
   }
 
   const startSession = () => {
@@ -15,6 +16,7 @@ module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WA
   }
 
   const resumeCountdown = () => {
+    instance.isPaused = false
     if (instance.countdownTimer) {
       clearTimeout(instance.countdownTimer)
     }
@@ -22,12 +24,14 @@ module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WA
   }
 
   const pauseCountdown = () => {
+    instance.isPaused = true
     if (instance.countdownTimer) {
       clearTimeout(instance.countdownTimer)
     }
   }
 
   const closeSession = () => {
+    // FIXME: 是否有必要
     if (instance.countdownTimer) {
       clearTimeout(instance.countdownTimer)
     }
@@ -47,6 +51,10 @@ module.exports = function createActivityTracker ({ onBecomeInactive, INACTIVE_WA
   }
 
   const updateActivity = () => {
+    if (instance.isPaused) {
+      return
+    }
+
     if (!hasSession()) {
       startSession()
     } else {
