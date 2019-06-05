@@ -1,6 +1,6 @@
 {
   "name": "ss-activity-tracker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "计算用户活动时间",
   "main": "main.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "url": "https://github.com/zhike-team/activity-tracker/issues"
   },
   "homepage": "https://github.com/zhike-team/activity-tracker#readme",
-  "dependencies": {
-    "eslint": "^5.1.0"
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "5.16.0"
   }
 }
